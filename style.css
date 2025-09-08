@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: aliceblue;
+  background: linear-gradient(135deg, #001f3f, #094582, #001a29);
+}
+
+.container {
+  padding: 1.75rem;
+  border-radius: 0.75rem;
+  min-height: 43vh;
+  width: 44vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(247, 247, 247, 0.3);
+}
+
+.setup {
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.amount p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.setup i {
+  color: rgb(251, 219, 113);
+  font-size: 2.3rem;
+  padding-right: 1rem;
+}
+
+form {
+  margin: 1.75rem 0 1rem 0;
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+input {
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  height: 2rem;
+  padding-left: 1rem;
+  background-color: rgb(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+
+.select-container img {
+  max-width: 1.7rem;
+}
+
+.select-container {
+  display: flex;
+  width: 5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  background-color: rgba(70, 69, 69, 0.7);
+}
+
+.dropdown i {
+  margin-top: 1rem;
+}
+
+.select-container select {
+  width: auto;
+  cursor: pointer;
+}
+
+.msg {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(220, 220, 246);
+  margin: 12px;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.msg u {
+  color: #ffd700;
+}
+
+form button {
+  height: 2rem;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+  color: #000;
+  transition: all 0.1s ease-in-out;
+  transform: scale(1);
+}
+
+#falling-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.money {
+  position: absolute;
+  top: -50px;
+  width: 25px;
+  height: 25px;
+  animation: fall 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    top: 100vh;
+    opacity: 0;
+    transform: rotateY(360deg);
+  }
+}
