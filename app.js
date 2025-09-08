@@ -63,7 +63,7 @@ const updateMsg = async () => {
   } <br>↟↡ <br><u>${finalAmt}</u> ${countryList[toCurr.value].name}`;
 
   btn.disabled = false;
-  btn.innerText = "convert";
+  btn.innerText = "click here to convert";
 };
 
 function createCoin() {
